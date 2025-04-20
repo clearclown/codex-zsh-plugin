@@ -1,0 +1,17 @@
+# ~/.oh-my-zsh/custom/plugins/codex/_codex
+
+#compdef codex
+
+_arguments -s \
+  '(-m --model)'{-m,--model}'[Model to use]:model:(gpt-4o o4-mini o3 gpt-4.1 o1 o1-mini o1-pro)' \
+  '(-a --approval-mode)'{-a,--approval-mode}'[Approval mode]:mode:(suggest auto-edit full-auto)' \
+  '--auto-edit[Auto-edit mode]' \
+  '--full-auto[Full-auto mode]' \
+  '(-q --quiet)'{-q,--quiet}'[Quiet mode]' \
+  '(-j --json)'{-j,--json}'[JSON output]' \
+  '(-i --image)'{-i,--image}'[Image input file]:file:_files' \
+  '--project-doc[Project doc file]:file:_files' \
+  '--no-project-doc[Ignore codex.md]' \
+  '--full-context[Load entire repo context]' \
+  '--dangerously-auto-approve-everything[Dangerous auto approve]' \
+  '*::prompt: '
