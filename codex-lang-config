@@ -1,0 +1,25 @@
+#!/usr/bin/env zsh
+
+echo "🌐 Select your language / 言語を選択してください:"
+echo "1) English 🇬🇧"
+echo "2) 日本語"
+echo "3) 简体中文 🇨🇳"
+echo "4) 繁體中文 🇹🇼"
+echo "5) العربية 🇸🇦"
+echo "6) فارسی 🇮🇷"
+echo "7) Русский 🇷🇺"
+echo -n "Input [1-7, default: 1]: "
+read lang_choice
+
+case "$lang_choice" in
+  2) lang="ja" ;;
+  3) lang="zh" ;;
+  4) lang="zh-tw" ;;
+  5) lang="ar" ;;
+  6) lang="fa" ;;
+  7) lang="ru" ;;
+  *) lang="en" ;;
+esac
+
+echo "$lang" > ~/.codex_lang
+echo "✅ Language set to: $lang"
